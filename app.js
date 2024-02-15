@@ -1,26 +1,52 @@
-let nbr_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let filteredNbr = nbr_arr.filter(num => num >= 5);
-console.log("Numbers greater than or equal to 5:", filteredNbr);
+let element = document.getElementsByTagName("h1");
+console.log(element[0]);
+element[0].innerHTML = "text";
 
-let evenNbr = nbr_arr.filter(num => num % 2 === 0);
-console.log("Even numbers:", evenNbr);
+element[0].style.backgroundColor = "red";
 
-let str_arr = ["hallo", "ich", "bin", "azaiez", "gallela"];
-let filteredStr = str_arr.filter(string => string.length <= 5);
-console.log("Strings with length less than or equal to 5:", filteredStr);
+let button = document.querySelector("#myButton");
+button.addEventListener("mouseover", handleclick);
 
-let people = [
-    { name: "sallah", age: 22, club: true },
-    { name: "amar", age: 24, club: false },
-    { name: "salim", age: 20, club: true },
-    { name: "ranim", age: 17, club: true }
-];
+function handleclick(){
+    console.log("button clicked");
+}
 
-let clubMembers = people.filter(person => person.club);
-console.log("Club members:", clubMembers);
 
-let adults = people.filter(person => person.age > 18);
-console.log("Adults:", adults);
+//doesn't work
+let input = document.getElementById("myInput");
+button.addEventListener("keyup", handleup);
+
+function handleup(event){
+    console.log(event);
+    console.log(event.target);
+}
+
+// let img = document.getElementsByTagName("img");
+// img[0].setAttribute("src", "https://i0.wp.com/www.spielanime.com/wp-content/uploads/2024/01/Fans-are-confused-whether-to-watch-Solo-Leveling-anime-in-Korean-or-Japanese-1.webp");
+
+// let nbr_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let filteredNbr = nbr_arr.filter(num => num >= 5);
+// console.log("Numbers greater than or equal to 5:", filteredNbr);
+
+// let evenNbr = nbr_arr.filter(num => num % 2 === 0);
+// console.log("Even numbers:", evenNbr);
+
+// let str_arr = ["hallo", "ich", "bin", "azaiez", "gallela"];
+// let filteredStr = str_arr.filter(string => string.length <= 5);
+// console.log("Strings with length less than or equal to 5:", filteredStr);
+
+// let people = [
+//     { name: "sallah", age: 22, club: true },
+//     { name: "amar", age: 24, club: false },
+//     { name: "salim", age: 20, club: true },
+//     { name: "ranim", age: 17, club: true }
+// ];
+
+// let clubMembers = people.filter(person => person.club);
+// console.log("Club members:", clubMembers);
+
+// let adults = people.filter(person => person.age > 18);
+// console.log("Adults:", adults);
 
 
 
